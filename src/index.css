@@ -1,23 +1,94 @@
-.signup-container, .login-container {
+/* src/components/Login.css */
+
+body{
+  background-color: #2b2b38;
+}
+
+.login-page {
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  gap: 2px;
+}
+
+.card {
+  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  padding: 2rem;
-  background-color: #f0f0f0;
 }
 
-.signup-form, .login-form {
-  max-width: 400px;
+.left-card {
+  position: relative;
+  background-color: #1c1c2b;
+  border-radius: 20px;
+}
+
+.right-card {
+  padding: 32px;
+  background-color: #2b2b38;
+  border-radius: 0; /* Remove border-radius for the right card */
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px
+}
+
+.card-caption {
+  padding: 16px;
+  font-size: 18px;
+  text-align: center;
+  margin-top: auto;
+  color: white;
+}
+
+.back-link {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  font-size: 14px;
+  color: #a0a0b0;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 16px;
   width: 100%;
 }
 
-button {
-  margin-top: 10rem;
+.login-typography {
+  font-size: x-large;
+  color: white;
+  font-weight: bold;
 }
 
-img {
-  max-width: 100%;
-  border-radius: 8px;
+button {
+  background-color: #6b5b95;
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .login-page {
+    flex-direction: column;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .left-card {
+    height: 40vh;
+  }
+
+  .right-card {
+    height: 60vh;
+  }
 }
